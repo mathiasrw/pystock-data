@@ -121,3 +121,6 @@ http://data.pystock.com/2016/index.txt
 From there, you will find all the .tar.gz files for that year. For instance:
 
 http://data.pystock.com/2016/20160104.tar.gz
+
+## raw data
+The  unpacked data can also be accessed at http://stock-data.surge.sh
