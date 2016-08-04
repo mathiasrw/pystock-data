@@ -1,0 +1,13 @@
+{
+  "name": "pystock-data-raw",
+  "version": "0.1.0",
+  "description": "",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Lets trawl that data\"",
+  },
+  "author": "mathiasrw",
+  "license": "MIT"
+}
