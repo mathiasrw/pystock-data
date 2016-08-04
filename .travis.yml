@@ -8,12 +8,10 @@ node_js: "node"
 
 
 before_deploy:
-  - for f in $(find -maxdepth 1 | grep .tar.gz); do mkdir ${f%.tar.gz}; tar -xafvz $f -C ${f%.tar.gz} ; done
-  - cd 2015
-  - ls
-  - cd ../2016
-  - ls
-  - mv CNAME noCNAME
+  - rm CNAME
+  - for f in $(find . | grep .tar.gz); do mkdir ${f%.tar.gz}; tar -xaf $f -C ${f%.tar.gz}; rm $f ; done
+  - find .
+
   
 deploy:
   skip_cleanup: true
