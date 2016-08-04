@@ -1,3 +1,10 @@
+language: node_js
+node_js: "node"
+
+branches:
+  only:
+  - gh-pages
+
 before_deploy:
   - for f in $(find -maxdepth 1 | grep .tar.gz); do mkdir ${f%.tar.gz}; tar -xafvz $f -C ${f%.tar.gz} ; done
   - cd 2015
@@ -10,3 +17,6 @@ deploy:
   skip_cleanup: true
   provider: surge
   domain: stock-data.surge.sh
+  on:
+    branch: gh-pages
+
