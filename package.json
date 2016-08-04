@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Lets trawl that data\"",
+    "test": "echo \"Lets trawl that data\""
   },
   "author": "mathiasrw",
   "license": "MIT"
