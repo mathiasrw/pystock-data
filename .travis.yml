@@ -10,7 +10,8 @@ node_js: "node"
 before_deploy:
   - rm CNAME
   - for f in $(find . | grep .tar.gz); do mkdir ${f%.tar.gz}; tar -xaf $f -C ${f%.tar.gz}; rm $f ; done
-  - find .
+  - echo "<center><h2>pystock data raw<h2><br><i>files:</i>" > index.html 
+  - for f in $(find . -type f | sort -nr| grep 20); do echo "<a href='$f'>$f</a><br>" >> index.html; done
 
   
 deploy:
