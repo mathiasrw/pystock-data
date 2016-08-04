@@ -1,9 +1,11 @@
-language: node_js
-node_js: "node"
-
 branches:
   only:
   - gh-pages
+
+
+language: node_js
+node_js: "node"
+
 
 before_deploy:
   - for f in $(find -maxdepth 1 | grep .tar.gz); do mkdir ${f%.tar.gz}; tar -xafvz $f -C ${f%.tar.gz} ; done
