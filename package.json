@@ -6,8 +6,12 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Lets trawl that data\""
+    "test": "echo \"Lets trawl that data\"",
+    "unpack-data": "for f in $(find . | grep .tar.gz); do mkdir ${f%.tar.gz}; tar -xaf $f -C ${f%.tar.gz}; rm $f ; done";
+    "prepare-site": "rm CNAME && echo \"<center><h2>pystock data raw<h2><br><i>files:</i><br><tt>\" > index.html && for f in $(find . -type f | sort -nr| grep 20); do echo \"<a href='$f'>$f</a><br>\" >> index.html; done"
   },
   "author": "mathiasrw",
   "license": "MIT"
 }
+
+
