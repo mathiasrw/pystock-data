@@ -1,6 +1,6 @@
 branches:
   only:
-  - gh-pages
+  - json
 
 
 language: node_js
@@ -8,13 +8,12 @@ node_js: "node"
 
 
 before_deploy:
-  - npm run unpack-data
-  - npm run prepare-site
+  - npm run release
   
 deploy:
   skip_cleanup: true
   provider: surge
   domain: stock-data.surge.sh
   on:
-    branch: gh-pages
+    branch: json
 
